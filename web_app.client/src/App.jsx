@@ -1,49 +1,45 @@
 import { useEffect, useState } from 'react';
+import { Routes, Route, Outlet, Link } from "react-router-dom";
 import './App.css';
+import Home from "./pages/home";
+import Research from "./pages/research";
+import Community from "./pages/community";
+import Undefined from "./pages/undefined";
 
-function App() {
-    const [forecasts, setForecasts] = useState();
-
-    useEffect(() => {
-        populateWeatherData();
-    }, []);
-
-    const contents = forecasts === undefined
-        ? <p><em>Loading... Please refresh once the ASP.NET backend has started. See <a href="https://aka.ms/jspsintegrationreact">https://aka.ms/jspsintegrationreact</a> for more details.</em></p>
-        : <table className="table table-striped" aria-labelledby="tabelLabel">
-            <thead>
-                <tr>
-                    <th>Date</th>
-                    <th>Temp. (C)</th>
-                    <th>Temp. (F)</th>
-                    <th>Summary</th>
-                </tr>
-            </thead>
-            <tbody>
-                {forecasts.map(forecast =>
-                    <tr key={forecast.date}>
-                        <td>{forecast.date}</td>
-                        <td>{forecast.temperatureC}</td>
-                        <td>{forecast.temperatureF}</td>
-                        <td>{forecast.summary}</td>
-                    </tr>
-                )}
-            </tbody>
-        </table>;
-
+function NavMenu() {
     return (
-        <div>
-            <h1 id="tabelLabel">Weather forecast</h1>
-            <p>This component demonstrates fetching data from the server.</p>
-            {contents}
-        </div>
+        <>
+            <div id="navmenu">
+                <nav>
+                    <ul>
+                        <li>
+                            <Link to={'/Home'}>Home</Link>
+                        </li>
+                        <li>
+                            <Link to={'/Research'}>Research</Link>
+                        </li>
+                        <li>
+                            <Link to={'/Community'}>Community</Link>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </>
+    )
+}
+function App() {
+    return (
+        <>
+            <div className="App">
+                <NavMenu />
+                <Routes>
+                    <Route path='/' element={<Home />} />
+                    <Route path='Research' element={<Research />} />
+                    <Route path='Community' element={<Community />} />
+                </Routes>
+            </div>
+        </>
     );
-    
-    async function populateWeatherData() {
-        const response = await fetch('weatherforecast');
-        const data = await response.json();
-        setForecasts(data);
-    }
 }
 
 export default App;
