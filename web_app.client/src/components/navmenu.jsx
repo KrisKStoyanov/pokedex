@@ -4,7 +4,6 @@ function NavMenu() {
     const token = JSON.parse(localStorage.getItem("token"));
     function logOut() {
         localStorage.setItem("token", JSON.stringify({ ...token, loggedIn: false }));
-        location.reload();
     }
 
     return (
@@ -26,8 +25,8 @@ function NavMenu() {
                             <li>
                                 <Link to={'/Community'}>Community</Link>
                             </li>
-                            <li onMouseDown={logOut}>
-                                <Link to={'/'}>Log Out</Link>
+                            <li>
+                                <Link to={'/'} onMouseDown={logOut}>Log Out</Link>
                             </li>
                         </>}
                     </ul>
