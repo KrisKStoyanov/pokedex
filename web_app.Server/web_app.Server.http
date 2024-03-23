@@ -1,6 +1,6 @@
 @web_app.Server_HostAddress = http://localhost:5161
 
-GET {{web_app.Server_HostAddress}}/weatherforecast/
+GET {{web_app.Server_HostAddress}}/account/
 Accept: application/json
 
 ###

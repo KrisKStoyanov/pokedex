@@ -43,22 +43,19 @@ function Login() {
     return (
         <>
             <div className="wrapper">
-                <h1>Test Login</h1>
-                {submitting &&
-                    <div>Loading...</div>
-                }
+                <h3>Sign in</h3>
                 <form onSubmit={handleSubmit}>
                     <fieldset disabled={submitting}>
                         <label>
                             <p>Username</p>
-                            <input name="username" value={formData.username} placeholder="Enter your username" onChange={handleChange} />
+                            <input name="username" type="text" value={formData.username} placeholder="Enter your username" onChange={handleChange} />
                         </label>
                         <label>
                             <p>Password</p>
-                            <input name="password" value={formData.password} placeholder="Enter your password" onChange={handleChange} />
+                            <input name="password" type="password" value={formData.password} placeholder="Enter your password" onChange={handleChange} />
                         </label>
                     </fieldset>
-                    <button type="submit" disabled={submitting}>Sign in</button>
+                    <button type="submit" disabled={submitting}>{submitting ? <>Loading</> : <>Sign in</>}</button>
                 </form>
             </div>
         </>

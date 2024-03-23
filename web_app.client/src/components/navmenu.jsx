@@ -9,6 +9,9 @@ function NavMenu() {
                             <Link to={'/'}>Home</Link>
                         </li>
                         <li>
+                            <Link to={'/Profile'}>Profile</Link>
+                        </li>
+                        <li>
                             <Link to={'/Research'}>Research</Link>
                         </li>
                         <li>
