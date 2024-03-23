@@ -3,33 +3,35 @@ import {
     createBrowserRouter,
     RouterProvider,
 } from "react-router-dom";
-import Home from './pages/home.jsx'
+import Root from './pages/root.jsx'
 import Research from './pages/research.jsx';
 import Community from './pages/community.jsx';
 import Undefined from './pages/undefined.jsx';
 import Profile from './pages/profile';
-
+import Layout from './components/layout';
 
 const appRouter = createBrowserRouter([
     {
-        path: "/",
-        element: <Home />,
-        errorElement: <Undefined />
-    },
-    {
-        path: "profile",
-        element: <Profile />,
-        errorElement: <Undefined />
-    },
-    {
-        path: "research",
-        element: <Research />,
-        errorElement: <Undefined />
-    },
-    {
-        path: "community",
-        element: <Community />,
-        errorElement: <Undefined />
+        element: <Layout />,
+        errorElement: <Undefined />,
+        children: [
+            {
+                path: "/",
+                element: <Root />
+            },
+            {
+                path: "profile",
+                element: <Profile />
+            },
+            {
+                path: "research",
+                element: <Research />
+            },
+            {
+                path: "community",
+                element: <Community />
+            }
+        ]
     }
 ]);
 

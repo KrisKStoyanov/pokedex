@@ -1,8 +1,6 @@
-import NavMenu from "../components/navmenu";
-function Home() {
+function Root() {
     return (
         <>
-            <NavMenu />
             <div>
                 <h1>Digital Museum of Video Games</h1>
                 <p>Welcome</p>
@@ -11,4 +9,4 @@ function Home() {
     );
 }
 
-export default Home;
+export default Root;
