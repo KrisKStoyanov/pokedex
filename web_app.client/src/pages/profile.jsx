@@ -1,14 +1,16 @@
 import useToken from '../hooks/useToken';
 import NavMenu from '../components/navmenu';
-import Account from './account';
+import Dashboard from '../components/dashboard';
+import Account from '../components/account';
+
 function Profile() {
     const { token, setToken } = useToken();
 
     return (
         <>
             <NavMenu />
-            {(!token) ? <Account setToken={setToken} /> : <>Hi, token.Account.Forename</> }
-            
+            <Account setToken={setToken} />
+            <Dashboard />
         </>
      );
 }

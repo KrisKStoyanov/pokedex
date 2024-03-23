@@ -47,7 +47,7 @@ function Login() {
                 <form onSubmit={handleSubmit}>
                     <fieldset disabled={submitting}>
                         <label>
-                            <p>Username</p>
+                            <p>E-mail</p>
                             <input name="username" type="text" value={formData.username} placeholder="Enter your username" onChange={handleChange} />
                         </label>
                         <label>

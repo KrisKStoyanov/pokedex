@@ -3,12 +3,11 @@ import { useState, useReducer } from 'react';
 const formReducer = (state, event) => {
     if (event.reset) {
         return {
-            email: '',
+            username: '',
             forename: '',
             surname: '',
             dateOfBirth: '',
             country: '',
-            username: '',
             password: '',
             confirmPassword: '',
         }
@@ -23,12 +22,11 @@ function Register() {
 
     const [submitting, setSubmitting] = useState(false);
     const [formData, setFormData] = useReducer(formReducer, {
-        email: '',
+        username: '',
         forename: '',
         surname: '',
         dateOfBirth: '',
         country: '',
-        username: '',
         password: '',
         confirmPassword: '',
     });
@@ -77,10 +75,6 @@ function Register() {
                         <label>
                             <p>Country</p>
                             <input name="country" type="text" value={formData.country} placeholder="Enter your country" onChange={handleChange} />
-                        </label>
-                        <label>
-                            <p>Username</p>
-                            <input name="username" type="text" value={formData.username} placeholder="Enter your username" onChange={handleChange} />
                         </label>
                         <label>
                             <p>Password</p>
