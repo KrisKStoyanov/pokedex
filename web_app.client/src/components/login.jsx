@@ -3,22 +3,18 @@ import { useState } from 'react';
 function Login() {
 
     const [formSubmitted, setFormSubmitted] = useState(false);
-    const [formData, setFormData] = useState({
+    const [token, setToken] = useState({
         username: '',
-        password: ''
+        password: '',
+        loggedIn: true
     });
 
     function handleSubmit() {
         setFormSubmitted(true)
-        const username = localStorage.getItem("username");
-        const password = localStorage.getItem("password");
-        console.log(username);
-        console.log(password);
-        console.log(formData.username);
-        console.log(formData.password);
-        if (username !== null && password !== null) {
-            if (username === formData.username && password === formData.password) {
-                alert("Logged in");
+        const tokenData = JSON.parse(localStorage.getItem("token"));
+        if (tokenData) {
+            if (tokenData.username === token.username && tokenData.password === token.password) {
+                localStorage.setItem("token", JSON.stringify({ ...tokenData, loggedIn: true }));
             }
             else {
                 alert("Invalid credentials 1");
@@ -40,11 +36,11 @@ function Login() {
                     <fieldset disabled={formSubmitted}>
                         <label>
                             <p>Username</p>
-                            <input name="username" type="text" value={formData.username} placeholder="Enter your username" onChange={e => setFormData({...formData, username: e.target.value})} />
+                            <input name="username" type="text" value={token.username} placeholder="Enter your username" onChange={e => setToken({...token, username: e.target.value})} />
                         </label>
                         <label>
                             <p>Password</p>
-                            <input name="password" type="password" value={formData.password} placeholder="Enter your password" onChange={e => setFormData({...formData, password: e.target.value})} />
+                            <input name="password" type="password" value={token.password} placeholder="Enter your password" onChange={e => setToken({...token, password: e.target.value})} />
                         </label>
                     </fieldset>
                     <button type="submit" disabled={formSubmitted}>{formSubmitted ? <>Loading</> : <>Submit</>}</button>

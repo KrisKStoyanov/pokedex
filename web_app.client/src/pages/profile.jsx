@@ -4,11 +4,12 @@ import Account from '../components/account';
 
 function Profile() {
 
+    const token = JSON.parse(localStorage.getItem("token"));
+
     return (
         <>
             <NavMenu />
-            <Account />
-            <Dashboard />
+            {!token.loggedIn ? <Account /> : <Dashboard/> }
         </>
      );
 }

@@ -3,16 +3,14 @@ import { useState } from 'react';
 function Register() {
 
     const [formSubmitted, setFormSubmitted] = useState(false);
-    const [formData, setFormData] = useState({
+    const [token, setToken] = useState({
         username: '',
-        password: ''
+        password: '',
+        loggedIn: false
     });
     function handleSubmit() {
         setFormSubmitted(true);
-        localStorage.setItem("username", formData.username);
-        localStorage.setItem("password", formData.password);
-        console.log(localStorage.getItem("username"));
-        console.log(localStorage.getItem("password"));
+        localStorage.setItem("token", JSON.stringify(token));
         setTimeout(
             setFormSubmitted(false),
             1000);
@@ -26,11 +24,11 @@ function Register() {
                     <fieldset disabled={formSubmitted}>
                         <label>
                             <p>Username</p>
-                            <input name="username" type="text" value={formData.username} placeholder="Enter your username" onChange={e => setFormData({ ...formData, username: e.target.value} )} />
+                            <input name="username" type="text" value={token.username} placeholder="Enter your username" onChange={e => setToken({ ...token, username: e.target.value })} />
                         </label>
                         <label>
                             <p>Password</p>
-                            <input name="password" type="password" value={formData.password} placeholder="Enter your password" onChange={e => setFormData({ ...formData, password: e.target.value })} />
+                            <input name="password" type="password" value={token.password} placeholder="Enter your password" onChange={e => setToken({ ...token, password: e.target.value })} />
                         </label>
                     </fieldset>
                     <button type="submit" disabled={formSubmitted}>{formSubmitted ? <>Loading</> : <>Register</>}</button>
