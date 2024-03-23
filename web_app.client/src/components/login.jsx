@@ -1,43 +1,35 @@
-import { useState, useReducer } from 'react';
-
-const formReducer = (state, event) => {
-    if (event.reset) {
-        return {
-            username: '',
-            password: ''
-        }
-    }
-    return {
-        ...state,
-        [event.name]: event.value
-    }
-}
+import { useState } from 'react';
 
 function Login() {
 
-    const [submitting, setSubmitting] = useState(false);
-    const [formData, setFormData] = useReducer(formReducer, {
+    const [formSubmitted, setFormSubmitted] = useState(false);
+    const [formData, setFormData] = useState({
         username: '',
         password: ''
     });
 
-    const handleSubmit = event => {
-        event.preventDefault();
-        setSubmitting(true);
-
-        setTimeout(() => {
-            setSubmitting(false);
-            setFormData({
-                reset: true
-            })
-        }, 3000)
-    }
-
-    const handleChange = event => {
-        setFormData({
-            name: event.target.name,
-            value: event.target.value,
-        })
+    function handleSubmit() {
+        setFormSubmitted(true)
+        const username = localStorage.getItem("username");
+        const password = localStorage.getItem("password");
+        console.log(username);
+        console.log(password);
+        console.log(formData.username);
+        console.log(formData.password);
+        if (username !== null && password !== null) {
+            if (username === formData.username && password === formData.password) {
+                alert("Logged in");
+            }
+            else {
+                alert("Invalid credentials 1");
+            }
+        }
+        else {
+            alert("Invalid credentials 2");
+        }
+        setTimeout(
+            setFormSubmitted(false),
+            1000);
     }
 
     return (
@@ -45,17 +37,17 @@ function Login() {
             <div className="wrapper">
                 <h3>Sign in</h3>
                 <form onSubmit={handleSubmit}>
-                    <fieldset disabled={submitting}>
+                    <fieldset disabled={formSubmitted}>
                         <label>
-                            <p>E-mail</p>
-                            <input name="username" type="text" value={formData.username} placeholder="Enter your username" onChange={handleChange} />
+                            <p>Username</p>
+                            <input name="username" type="text" value={formData.username} placeholder="Enter your username" onChange={e => setFormData({...formData, username: e.target.value})} />
                         </label>
                         <label>
                             <p>Password</p>
-                            <input name="password" type="password" value={formData.password} placeholder="Enter your password" onChange={handleChange} />
+                            <input name="password" type="password" value={formData.password} placeholder="Enter your password" onChange={e => setFormData({...formData, password: e.target.value})} />
                         </label>
                     </fieldset>
-                    <button type="submit" disabled={submitting}>{submitting ? <>Loading</> : <>Sign in</>}</button>
+                    <button type="submit" disabled={formSubmitted}>{formSubmitted ? <>Loading</> : <>Submit</>}</button>
                 </form>
             </div>
         </>
