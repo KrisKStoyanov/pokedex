@@ -1,8 +1,9 @@
 function Home() {
     return (
-        <div className="layout-home">
+        <div className="layout-frame">
             <h1>Digital Museum</h1>
-            <p>Welcome</p>
+            <p>Welcome to the home page</p>
+            <br></br>
         </div>
         
     );

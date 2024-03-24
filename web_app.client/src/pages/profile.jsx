@@ -6,7 +6,7 @@ function Profile() {
     const token = JSON.parse(localStorage.getItem("token"));
 
     return (
-        <div className="layout-profile">
+        <div className="layout-frame-profile">
             {!token.loggedIn ? <Account /> : <Dashboard/> }
         </div>
      );

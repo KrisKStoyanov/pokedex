@@ -29,24 +29,22 @@ function Login() {
     }
 
     return (
-        <>
-            <div className="wrapper">
-                <h3>Sign in</h3>
-                <form onSubmit={handleSubmit}>
-                    <fieldset disabled={formSubmitted}>
-                        <label>
-                            <p>Email</p>
-                            <input name="username" required type="email" value={token.username} placeholder="Enter your username" onChange={e => setToken({ ...token, username: e.target.value })} />
-                        </label>
-                        <label>
-                            <p>Password</p>
-                            <input name="password" required type="password" value={token.password} placeholder="Enter your password" onChange={e => setToken({...token, password: e.target.value})} />
-                        </label>
-                    </fieldset>
-                    <button type="submit" disabled={formSubmitted}>{formSubmitted ? <>Loading</> : <>Submit</>}</button>
-                </form>
-            </div>
-        </>
+        <div className="layout-wrapper">
+            <h3>Sign in</h3>
+            <form onSubmit={handleSubmit}>
+                <fieldset disabled={formSubmitted}>
+                    <label>
+                        <p>Email</p>
+                        <input name="username" required type="email" value={token.username} placeholder="Enter your username" onChange={e => setToken({ ...token, username: e.target.value })} />
+                    </label>
+                    <label>
+                        <p>Password</p>
+                        <input name="password" required type="password" value={token.password} placeholder="Enter your password" onChange={e => setToken({...token, password: e.target.value})} />
+                    </label>
+                </fieldset>
+                <button type="submit" disabled={formSubmitted}>{formSubmitted ? <>Loading</> : <>Submit</>}</button>
+            </form>
+        </div>
     );
 }
 
