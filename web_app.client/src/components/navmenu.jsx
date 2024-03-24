@@ -8,28 +8,30 @@ function NavMenu() {
     }
 
     return (
-        <nav>
-            <ul>
-                <li>
-                    <Link to={'/'}>Home</Link>
-                </li>
-                <li>
-                    <Link to={'/Profile'}>Profile</Link>
-                </li>
-                <li>
-                    <Link to={'/About'}>About</Link>
-                </li>
-                <li>
-                    <Link to={'/Contact'}>Contact</Link>
-                </li>
-                {token.loggedIn && 
-                <>
+        <div className="layout-wrapper">
+            <nav>
+                <ul>
                     <li>
-                        <Link to={'/'} onMouseDown={logOut}>Log Out</Link>
+                        <Link to={'/'}>Home</Link>
                     </li>
-                </>}
-            </ul>
-        </nav>
+                    <li>
+                        <Link to={'/Profile'}>Profile</Link>
+                    </li>
+                    <li>
+                        <Link to={'/About'}>About</Link>
+                    </li>
+                    <li>
+                        <Link to={'/Contact'}>Contact</Link>
+                    </li>
+                    {token.loggedIn && 
+                    <>
+                        <li>
+                            <Link to={'/'} onMouseDown={logOut}>Log Out</Link>
+                        </li>
+                    </>}
+                </ul>
+            </nav>
+        </div>
     )
 }
 
