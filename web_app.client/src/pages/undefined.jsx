@@ -4,7 +4,7 @@ function Undefined() {
     console.log(error);
 
     return (
-        <div id="error-page">
+        <div id="layout-frame">
         <h1>Oops!</h1>
             <p>Sorry, an unexpected error has occured</p>
             <p>

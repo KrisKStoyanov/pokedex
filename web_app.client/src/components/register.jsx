@@ -18,20 +18,24 @@ function Register() {
 
     return (
         <div className="layout-wrapper">
-            <h3>Create your account</h3>
+            <h3>Register</h3>
             <form id="registration" onSubmit={handleSubmit}>
-                <fieldset disabled={formSubmitted}>
-                    <label>
-                        <p>Email</p>
+                <label>
+                    <p>
+                        Email
+                        <br></br>
                         <input name="username" required type="email" value={token.username} placeholder="Enter your username" onChange={e => setToken({ ...token, username: e.target.value })} />
-                    </label>
-                    <label>
-                        <p>Password</p>
+                    </p>
+                </label>
+                <label>
+                    <p>
+                        Password
+                        <br></br>
                         <input name="password" required type="password" value={token.password} placeholder="Enter your password" onChange={e => setToken({ ...token, password: e.target.value })} />
-                    </label>
-                </fieldset>
+                    </p>
+                </label>
                 <br></br>
-                <button type="submit" disabled={formSubmitted}>{formSubmitted ? <>Loading</> : <>Register</>}</button>
+                <button type="submit" disabled={formSubmitted}>{formSubmitted ? <>Loading</> : <>Submit</>}</button>
             </form>
             <br></br>
         </div>
