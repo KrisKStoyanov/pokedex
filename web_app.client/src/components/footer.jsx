@@ -1,8 +1,8 @@
 function Footer() {
     return (
         <>
-            <div>
-                <p>Copyright</p>
+            <div className="layout-footer">
+                <p>Copyright by Company Name</p>
             </div>
         </>
     );

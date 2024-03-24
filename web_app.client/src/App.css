@@ -1,9 +1,7 @@
 ﻿#root {
-    max-width: 1280px;
+    width: 100%;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 2rem;
-    text-align: center;
-    background: #ff9100;
 }
 
 tr:nth-child(even) {
@@ -18,3 +16,95 @@ th, td {
     padding-left: 1rem;
     padding-right: 1rem;
 }
+
+.layout-app {
+    width: 100%;
+    max-width: 100%;
+    background: #292c34;
+    color: #dae0dc;
+    margin: 0;
+    padding: 0;
+}
+
+.layout-footer {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 25%;
+    display: inline-block;
+    background: #dae0dc;
+    color: #292c34;
+    text-align: left;
+    margin: 0 auto;
+    padding-left: 1em;
+    font-weight: bold;
+}
+
+.layout-header {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 25%;
+    display: inline-block;
+    background: #dae0dc;
+    color: #292c34;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+    .layout-header nav {
+        display: inline-block;
+        background: inherit;
+        color: inherit;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        vertical-align: top;
+    }
+
+    .layout-header ul {
+        display: inline-block;
+        list-style: none;
+        color: inherit;
+        background: inherit;
+        margin: 0;
+        padding-left: 0;
+        width: auto;
+        height: auto;
+    }
+
+        .layout-header ul li {
+            display: inline-block;
+            color: inherit;
+            background: inherit;
+            margin: 0;
+            padding: 0;
+        }
+
+    .layout-header nav ul li a {
+        padding: 0.25em 1em;
+        margin: 0.15em;
+        text-decoration: none;
+        background-color: inherit; 
+        color: inherit; 
+        border: 3px solid black;
+        border-bottom-left-radius: 1em 1em;
+    }
+
+    .layout-header nav ul li a:hover, nav ul li a:focus {
+        color: black;
+        background-color: white;
+        font-weight: bold;
+    }
+
+.layout-logo {
+    display: inline-block;
+}
+
+    .layout-logo img {
+        width: 100px;
+        height: inherit;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }

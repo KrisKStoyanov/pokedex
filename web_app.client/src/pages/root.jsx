@@ -1,8 +1,8 @@
 function Root() {
     return (
         <>
-            <div>
-                <h1>Digital Museum of Video Games</h1>
+            <div className="layout-home">
+                <h1>Digital Museum</h1>
                 <p>Welcome</p>
             </div>
         </>

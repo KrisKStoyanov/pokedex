@@ -4,11 +4,11 @@ import {
     RouterProvider,
 } from "react-router-dom";
 import Root from './pages/root.jsx'
-import Research from './pages/research.jsx';
-import Community from './pages/community.jsx';
 import Undefined from './pages/undefined.jsx';
 import Profile from './pages/profile';
 import Layout from './components/layout';
+import About from './pages/about';
+import Contact from './pages/contact';
 
 const appRouter = createBrowserRouter([
     {
@@ -24,12 +24,12 @@ const appRouter = createBrowserRouter([
                 element: <Profile />
             },
             {
-                path: "research",
-                element: <Research />
+                path: "about",
+                element: <About />
             },
             {
-                path: "community",
-                element: <Community />
+                path: "contact",
+                element: <Contact />
             }
         ]
     }
@@ -38,9 +38,9 @@ const appRouter = createBrowserRouter([
 function App() {
     
     return (
-        <>
+        <div>
             <RouterProvider router={appRouter} />
-        </>
+        </div>
     )
 }
 
