@@ -7,7 +7,7 @@ function Profile() {
 
     return (
         <div className="layout-frame-profile">
-            {!token.loggedIn ? <Account /> : <Dashboard/> }
+            {!token.loggedIn ? <Account /> : <Dashboard />}
         </div>
      );
 }

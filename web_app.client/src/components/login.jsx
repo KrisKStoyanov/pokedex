@@ -42,8 +42,10 @@ function Login() {
                         <input name="password" required type="password" value={token.password} placeholder="Enter your password" onChange={e => setToken({...token, password: e.target.value})} />
                     </label>
                 </fieldset>
+                <br></br>
                 <button type="submit" disabled={formSubmitted}>{formSubmitted ? <>Loading</> : <>Submit</>}</button>
             </form>
+            <br></br>
         </div>
     );
 }

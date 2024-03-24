@@ -2,7 +2,7 @@ function Footer() {
     return (
         <>
             <div className="layout-footer">
-                <p>Copyright by Company Name</p>
+                <p>Created by Kristiyan Stoyanov</p>
             </div>
         </>
     );
