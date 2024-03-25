@@ -188,3 +188,26 @@ th, td {
 .layout-frame-profile .layout-wrapper {
     padding-inline: 10em;
 }
+
+.layout-wrapper table {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    color: #292c34;
+    text-align: center;
+    vertical-align: central;
+    justify-items: center;;
+}
+
+    .layout-wrapper table th {
+        color: #dae0dc;
+        background: #292c34;
+    }
+
+    .layout-wrapper table tr:hover {
+        color: #dae0dc;
+        background: #292c34;
+    }
+
+    .layout-wrapper table .layout-button {
+        
+    }

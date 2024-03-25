@@ -1,40 +1,52 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 function Dashboard() {
-    const [pokemon, setPokemon] = useState();
+    const [pokemonData, setPokemonData] = useState();
+    const [requestURL, setRequestURL] = useState('https://pokeapi.co/api/v2/pokemon/')
+
+    const getPokemonData = useCallback(async () => {
+        var isSubscribed = true;
+        const response = await fetch(requestURL);
+        const data = await response.json();
+        if (isSubscribed) {
+            setPokemonData(data);
+        }
+        return () => isSubscribed = false;
+    }, [requestURL])
 
     useEffect(() => {
-        populatePokemonData();
-    }, [])
+        getPokemonData().catch(console.error);
+    }, [getPokemonData])
 
     return (
         <div className="layout-wrapper">
-            {pokemon &&
+            {pokemonData &&
                 (<table>
                 <thead>
                     <tr>
-                        <th>Name</th>
+                        <th>NAME</th>
+                        <th>DESCRIPTION</th>
+                        <th>DESCRIPTION</th>
                     </tr>
                 </thead>
                 <tbody>
-                {pokemon.results.map((poke) =>
+                    {pokemonData.results.map((poke) =>
                     <tr key={poke.name}>
                         <td>{poke.name}</td>
+                        <td>description</td>
+                        <td>description</td>
                     </tr>)}
                 </tbody>
-                <button type="button" >Next</button>
+                <br></br>
+                {pokemonData.previous && <button id="prevBtn" className="layout-button" type="button" onClick={() =>
+                    setRequestURL(pokemonData.previous)} >Previous</button>}
+                {pokemonData.next && <button id="nextBtn" className="layout-button" type="button" onClick={() =>
+                    setRequestURL(pokemonData.next)} >Next</button>}
                 </table>
                 )
             }
         </div>
     );
-
-    async function populatePokemonData() {
-        const response = await fetch(' https://pokeapi.co/api/v2/pokemon/');
-        const data = await response.json();
-        setPokemon(data);
-        console.log(data);
-    }
 }
 
 export default Dashboard;
