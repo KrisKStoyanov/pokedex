@@ -35,13 +35,48 @@ function Dashboard() {
                         <td>{poke.name}</td>
                         <td>description</td>
                         <td>description</td>
-                    </tr>)}
-                </tbody>
-                <br></br>
-                {pokemonData.previous && <button id="prevBtn" className="layout-button" type="button" onClick={() =>
-                    setRequestURL(pokemonData.previous)} >Previous</button>}
-                {pokemonData.next && <button id="nextBtn" className="layout-button" type="button" onClick={() =>
-                    setRequestURL(pokemonData.next)} >Next</button>}
+                        </tr>)}
+
+                    {/*this is a silly way of aligning the buttons but I am running out of time*/}
+
+                    {pokemonData.next &&
+                        pokemonData.previous &&
+                        <>
+                            <td align="left">
+                                <button id="prevBtn" type="button" onClick={() =>
+                                    setRequestURL(pokemonData.previous)} >Previous</button>
+                            </td>
+                            <td>
+                            </td>
+                            <td align="right">
+                                <button id="nextBtn" type="button" onClick={() =>
+                                    setRequestURL(pokemonData.next)} >Next</button>
+                            </td>
+                        </>}
+
+                    {pokemonData.next &&
+                        !pokemonData.previous &&
+                        <>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                            <td align="right">
+                            <button id="nextBtn" type="button" onClick={() =>
+                                setRequestURL(pokemonData.next)} >Next</button>
+                            </td>
+                        </>}
+
+                    {!pokemonData.next &&
+                        pokemonData.previous &&
+                        <>
+                            <td align="left">
+                                <button id="prevBtn" type="button" onClick={() =>
+                                    setRequestURL(pokemonData.previous)} >Previous</button>
+                            </td>
+                        </>}
+
+                    </tbody>
                 </table>
                 )
             }
