@@ -1,40 +1,36 @@
 import { useState, useEffect, useCallback } from 'react';
 
 function Dashboard() {
-    const [pokemonData, setPokemonData] = useState();
+    const [pokemonPage, setPokemonPage] = useState();
     const [requestURL, setRequestURL] = useState('https://pokeapi.co/api/v2/pokemon/')
-    const [imageRequestURL, setImageRequestURL] = useState('');
-    const [imageURL, setImageURL] = useState('');
+    const [pokemonDetails, setPokemonDetails] = useState([]);
 
     const getPokemonData = useCallback(async () => {
         var isSubscribed = true;
         const response = await fetch(requestURL);
         const data = await response.json();
         if (isSubscribed) {
-            setPokemonData(data);
+            setPokemonPage(data);
+            const pokemonURLs = data.results.map((pokemon) => pokemon.url);
+            
+            const promises = pokemonURLs.map(url => fetch(url));
+
+            const responses = await Promise.all(promises);
+
+            const pokemonDetails = await Promise.all(responses.map(r => r.json()));
+            setPokemonDetails(pokemonDetails);
+            console.log(pokemonDetails);
         }
-        data.results.map((pokemon) => setImageRequestURL(pokemon.url));
         return () => isSubscribed = false;
     }, [requestURL])
 
-    const getPokemonImage = useCallback(async () => {
-        var isSubscribed = true;
-        const response = await fetch(imageRequestURL);
-        const data = await response.json();
-        if (isSubscribed) {
-            setImageURL(data);
-        }
-        return () => isSubscribed = false;
-    }, [imageRequestURL])
-
     useEffect(() => {
         getPokemonData().catch(console.error);
-        getPokemonImage().catch(console.error);
-    }, [getPokemonData, getPokemonImage])
+    }, [getPokemonData])
 
     return (
         <div className="layout-wrapper">
-            {pokemonData &&
+            {pokemonPage &&
                 (<table>
                 <thead>
                     <tr>
@@ -43,44 +39,44 @@ function Dashboard() {
                     </tr>
                 </thead>
                 <tbody>
-                    {pokemonData.results.map((pokemon) => (
-                    <tr key={pokemon.name}>
-                        <td>{pokemon.name}</td>
-                            <td>{imageURL ? <img src={imageURL.sprites.other.home.front_default} width={100} height={100} /> : <>Loading...</>}</td>
+                    {pokemonDetails.map((pokemon) => (
+                        <tr key={pokemon.name}>
+                            <td>{pokemon.name}</td>
+                        <td><img src={pokemon.sprites.other.home.front_default} width={100} height={100} /></td>
                     </tr>) ) }
 
                     {/*this is a silly way of aligning the buttons but I am running out of time*/}
 
-                    {pokemonData.next &&
-                        pokemonData.previous &&
+                    {pokemonPage.next &&
+                        pokemonPage.previous &&
                         <>
                             <td align="left">
                                 <button id="prevBtn" type="button" onClick={() =>
-                                    setRequestURL(pokemonData.previous)} >Previous</button>
+                                setRequestURL(pokemonPage.previous)} >Previous</button>
                             </td>
                             <td align="right">
                                 <button id="nextBtn" type="button" onClick={() =>
-                                    setRequestURL(pokemonData.next)} >Next</button>
+                                setRequestURL(pokemonPage.next)} >Next</button>
                             </td>
                         </>}
 
-                    {pokemonData.next &&
-                        !pokemonData.previous &&
+                    {pokemonPage.next &&
+                        !pokemonPage.previous &&
                         <>
                         <td>
                         </td>
                             <td align="right">
                             <button id="nextBtn" type="button" onClick={() =>
-                                setRequestURL(pokemonData.next)} >Next</button>
+                                setRequestURL(pokemonPage.next)} >Next</button>
                             </td>
                         </>}
 
-                    {!pokemonData.next &&
-                        pokemonData.previous &&
+                    {!pokemonPage.next &&
+                        pokemonPage.previous &&
                         <>
                             <td align="left">
                                 <button id="prevBtn" type="button" onClick={() =>
-                                    setRequestURL(pokemonData.previous)} >Previous</button>
+                                setRequestURL(pokemonPage.previous)} >Previous</button>
                             </td>
                         </>}
 
