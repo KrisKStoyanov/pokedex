@@ -29,62 +29,54 @@ function Dashboard() {
     }, [getPokemonData])
 
     return (
-        <div className="layout-wrapper">
+        <>
             {pokemonPage &&
-                (<table>
-                <thead>
-                    <tr>
-                        <th>NAME</th>
-                        <th>IMAGE</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {pokemonDetails.map((pokemon) => (
-                        <tr key={pokemon.name}>
-                            <td>{pokemon.name}</td>
-                        <td><img src={pokemon.sprites.other.home.front_default} width={100} height={100} /></td>
-                    </tr>) ) }
+                <div className="layout-wrapper-special">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>NAME</th>
+                                <th>IMAGE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {pokemonDetails.map((pokemon) => (
+                                <tr key={pokemon.name}>
+                                    <td>{pokemon.name}</td>
+                                    <td><img src={pokemon.sprites.other.home.front_default} width={100} height={100} /></td>
+                                </tr>))}
 
+                        </tbody>
+                        
+                    </table>
                     {/*this is a silly way of aligning the buttons but I am running out of time*/}
-
                     {pokemonPage.next &&
                         pokemonPage.previous &&
                         <>
-                            <td align="left">
-                                <button id="prevBtn" type="button" onClick={() =>
+                            <button id="prevBtn" type="button" onClick={() =>
                                 setRequestURL(pokemonPage.previous)} >Previous</button>
-                            </td>
-                            <td align="right">
-                                <button id="nextBtn" type="button" onClick={() =>
+
+                            <button id="nextBtn" type="button" onClick={() =>
                                 setRequestURL(pokemonPage.next)} >Next</button>
-                            </td>
                         </>}
 
                     {pokemonPage.next &&
                         !pokemonPage.previous &&
                         <>
-                        <td>
-                        </td>
-                            <td align="right">
                             <button id="nextBtn" type="button" onClick={() =>
                                 setRequestURL(pokemonPage.next)} >Next</button>
-                            </td>
                         </>}
 
                     {!pokemonPage.next &&
                         pokemonPage.previous &&
                         <>
-                            <td align="left">
-                                <button id="prevBtn" type="button" onClick={() =>
+                            <button id="prevBtn" type="button" onClick={() =>
                                 setRequestURL(pokemonPage.previous)} >Previous</button>
-                            </td>
                         </>}
-
-                    </tbody>
-                </table>
-                )
-            }
-        </div>
+                    <br></br>
+                        <br></br>
+                </div>}
+        </>
     );
 }
 

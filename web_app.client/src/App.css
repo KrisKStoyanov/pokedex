@@ -41,6 +41,7 @@ th, td {
     font-weight: bold;
     margin: 0;
     padding: 0;
+
 }
 
 .layout-header {
@@ -56,7 +57,8 @@ th, td {
 }
 
 .layout-footer p {
-    padding-left: 1.5rem;
+    text-align: right;
+    padding-right: 1.5rem;
 }
 
 .layout-wrapper {
@@ -190,22 +192,40 @@ th, td {
     padding-inline: 10em;
 }
 
-.layout-wrapper table {
+.layout-wrapper-special table {
     padding-top: 1em;
     padding-bottom: 1em;
     color: #292c34;
-    text-align: center;
     vertical-align: central;
     justify-items: center;
+    text-align: center;
     width: 100%;
+    height: 0 auto;
 }
 
-    .layout-wrapper table th {
+    .layout-wrapper-special table th {
         color: #dae0dc;
         background: #292c34;
     }
 
-    .layout-wrapper table tr:hover {
+    .layout-wrapper-special table tr:hover {
         color: #dae0dc;
         background: #292c34;
+    }
+
+.layout-wrapper-special button {
+    width: 50%;
+    height: 100%;
+    text-transform: uppercase;
+    border: none;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.12s ease-in-out;
+    display: inline-block;
+}
+
+    .layout-wrapper-special button:hover, button:focus {
+        transform: scale(0.94);
+        color: #cecdcd;
+        box-shadow: 0 5px 15px #292c34;
     }
