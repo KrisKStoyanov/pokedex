@@ -6,8 +6,9 @@ function Register() {
     const [token, setToken] = useState({
         username: '',
         password: '',
-        loggedIn: false
+        loggedIn: 'false'
     });
+
     function handleSubmit() {
         setFormSubmitted(true);
         localStorage.setItem("token", JSON.stringify(token));

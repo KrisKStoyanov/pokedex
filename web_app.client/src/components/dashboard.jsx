@@ -19,7 +19,6 @@ function Dashboard() {
 
             const pokemonDetails = await Promise.all(responses.map(r => r.json()));
             setPokemonDetails(pokemonDetails);
-            console.log(pokemonDetails);
         }
         return () => isSubscribed = false;
     }, [requestURL])

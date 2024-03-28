@@ -1,1 +1,2 @@
 C:\Projects\Assignments\web_app\web_app.client\obj\Debug\web_app.client.esproj.CoreCompileInputs.cache
+C:\KrisDev\web_app\web_app.client\obj\Debug\web_app.client.esproj.CoreCompileInputs.cache

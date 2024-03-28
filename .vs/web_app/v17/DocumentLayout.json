@@ -1,0 +1,211 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\KrisDev\\web_app\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{35A0F0AF-A0E1-4FD9-830F-5D04645B902D}|web_app.client\\web_app.client.esproj|c:\\krisdev\\web_app\\web_app.client\\src\\components\\register.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{35A0F0AF-A0E1-4FD9-830F-5D04645B902D}|web_app.client\\web_app.client.esproj|solutionrelative:web_app.client\\src\\components\\register.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35A0F0AF-A0E1-4FD9-830F-5D04645B902D}|web_app.client\\web_app.client.esproj|c:\\krisdev\\web_app\\web_app.client\\src\\pages\\profile.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{35A0F0AF-A0E1-4FD9-830F-5D04645B902D}|web_app.client\\web_app.client.esproj|solutionrelative:web_app.client\\src\\pages\\profile.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35A0F0AF-A0E1-4FD9-830F-5D04645B902D}|web_app.client\\web_app.client.esproj|c:\\krisdev\\web_app\\web_app.client\\src\\components\\dashboard.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{35A0F0AF-A0E1-4FD9-830F-5D04645B902D}|web_app.client\\web_app.client.esproj|solutionrelative:web_app.client\\src\\components\\dashboard.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35A0F0AF-A0E1-4FD9-830F-5D04645B902D}|web_app.client\\web_app.client.esproj|c:\\krisdev\\web_app\\web_app.client\\src\\components\\navmenu.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{35A0F0AF-A0E1-4FD9-830F-5D04645B902D}|web_app.client\\web_app.client.esproj|solutionrelative:web_app.client\\src\\components\\navmenu.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35A0F0AF-A0E1-4FD9-830F-5D04645B902D}|web_app.client\\web_app.client.esproj|c:\\krisdev\\web_app\\web_app.client\\src\\components\\login.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{35A0F0AF-A0E1-4FD9-830F-5D04645B902D}|web_app.client\\web_app.client.esproj|solutionrelative:web_app.client\\src\\components\\login.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35A0F0AF-A0E1-4FD9-830F-5D04645B902D}|web_app.client\\web_app.client.esproj|c:\\krisdev\\web_app\\web_app.client\\src\\pages\\undefined.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{35A0F0AF-A0E1-4FD9-830F-5D04645B902D}|web_app.client\\web_app.client.esproj|solutionrelative:web_app.client\\src\\pages\\undefined.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35A0F0AF-A0E1-4FD9-830F-5D04645B902D}|web_app.client\\web_app.client.esproj|c:\\krisdev\\web_app\\web_app.client\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{35A0F0AF-A0E1-4FD9-830F-5D04645B902D}|web_app.client\\web_app.client.esproj|solutionrelative:web_app.client\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35A0F0AF-A0E1-4FD9-830F-5D04645B902D}|web_app.client\\web_app.client.esproj|c:\\krisdev\\web_app\\web_app.client\\src\\app.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{35A0F0AF-A0E1-4FD9-830F-5D04645B902D}|web_app.client\\web_app.client.esproj|solutionrelative:web_app.client\\src\\app.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CA8DCD4-43E5-4D5B-AFB4-E3DFB6FBF733}|web_app.Server\\web_app.Server.csproj|c:\\krisdev\\web_app\\web_app.server\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7CA8DCD4-43E5-4D5B-AFB4-E3DFB6FBF733}|web_app.Server\\web_app.Server.csproj|solutionrelative:web_app.server\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CA8DCD4-43E5-4D5B-AFB4-E3DFB6FBF733}|web_app.Server\\web_app.Server.csproj|c:\\krisdev\\web_app\\web_app.server\\web_app.server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{7CA8DCD4-43E5-4D5B-AFB4-E3DFB6FBF733}|web_app.Server\\web_app.Server.csproj|solutionrelative:web_app.server\\web_app.server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35A0F0AF-A0E1-4FD9-830F-5D04645B902D}|web_app.client\\web_app.client.esproj|c:\\krisdev\\web_app\\web_app.client\\src\\main.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{35A0F0AF-A0E1-4FD9-830F-5D04645B902D}|web_app.client\\web_app.client.esproj|solutionrelative:web_app.client\\src\\main.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{65ddf8c3-8f89-4077-a6c6-dbb8853aab13}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "undefined.jsx",
+              "DocumentMoniker": "C:\\KrisDev\\web_app\\web_app.client\\src\\pages\\undefined.jsx",
+              "RelativeDocumentMoniker": "web_app.client\\src\\pages\\undefined.jsx",
+              "ToolTip": "C:\\KrisDev\\web_app\\web_app.client\\src\\pages\\undefined.jsx",
+              "RelativeToolTip": "web_app.client\\src\\pages\\undefined.jsx",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2024-03-26T13:05:09.882Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "profile.jsx",
+              "DocumentMoniker": "C:\\KrisDev\\web_app\\web_app.client\\src\\pages\\profile.jsx",
+              "RelativeDocumentMoniker": "web_app.client\\src\\pages\\profile.jsx",
+              "ToolTip": "C:\\KrisDev\\web_app\\web_app.client\\src\\pages\\profile.jsx",
+              "RelativeToolTip": "web_app.client\\src\\pages\\profile.jsx",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2024-03-26T12:40:05.529Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "register.jsx",
+              "DocumentMoniker": "C:\\KrisDev\\web_app\\web_app.client\\src\\components\\register.jsx",
+              "RelativeDocumentMoniker": "web_app.client\\src\\components\\register.jsx",
+              "ToolTip": "C:\\KrisDev\\web_app\\web_app.client\\src\\components\\register.jsx",
+              "RelativeToolTip": "web_app.client\\src\\components\\register.jsx",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC0AAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2024-03-26T12:38:54.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "navmenu.jsx",
+              "DocumentMoniker": "C:\\KrisDev\\web_app\\web_app.client\\src\\components\\navmenu.jsx",
+              "RelativeDocumentMoniker": "web_app.client\\src\\components\\navmenu.jsx",
+              "ToolTip": "C:\\KrisDev\\web_app\\web_app.client\\src\\components\\navmenu.jsx",
+              "RelativeToolTip": "web_app.client\\src\\components\\navmenu.jsx",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2024-03-26T12:37:20.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "login.jsx",
+              "DocumentMoniker": "C:\\KrisDev\\web_app\\web_app.client\\src\\components\\login.jsx",
+              "RelativeDocumentMoniker": "web_app.client\\src\\components\\login.jsx",
+              "ToolTip": "C:\\KrisDev\\web_app\\web_app.client\\src\\components\\login.jsx",
+              "RelativeToolTip": "web_app.client\\src\\components\\login.jsx",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2024-03-26T12:35:32.494Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "web_app.Server",
+              "DocumentMoniker": "C:\\KrisDev\\web_app\\web_app.Server\\web_app.Server.csproj",
+              "RelativeDocumentMoniker": "web_app.Server\\web_app.Server.csproj",
+              "ToolTip": "C:\\KrisDev\\web_app\\web_app.Server\\web_app.Server.csproj",
+              "RelativeToolTip": "web_app.Server\\web_app.Server.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-03-26T12:34:33.202Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\KrisDev\\web_app\\web_app.Server\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "web_app.Server\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\KrisDev\\web_app\\web_app.Server\\Properties\\launchSettings.json",
+              "RelativeToolTip": "web_app.Server\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-03-26T12:33:31.67Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "dashboard.jsx",
+              "DocumentMoniker": "C:\\KrisDev\\web_app\\web_app.client\\src\\components\\dashboard.jsx",
+              "RelativeDocumentMoniker": "web_app.client\\src\\components\\dashboard.jsx",
+              "ToolTip": "C:\\KrisDev\\web_app\\web_app.client\\src\\components\\dashboard.jsx",
+              "RelativeToolTip": "web_app.client\\src\\components\\dashboard.jsx",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwBQAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2024-03-26T12:32:05.982Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "main.jsx",
+              "DocumentMoniker": "C:\\KrisDev\\web_app\\web_app.client\\src\\main.jsx",
+              "RelativeDocumentMoniker": "web_app.client\\src\\main.jsx",
+              "ToolTip": "C:\\KrisDev\\web_app\\web_app.client\\src\\main.jsx",
+              "RelativeToolTip": "web_app.client\\src\\main.jsx",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2024-03-26T12:31:10.006Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "App.jsx",
+              "DocumentMoniker": "C:\\KrisDev\\web_app\\web_app.client\\src\\App.jsx",
+              "RelativeDocumentMoniker": "web_app.client\\src\\App.jsx",
+              "ToolTip": "C:\\KrisDev\\web_app\\web_app.client\\src\\App.jsx",
+              "RelativeToolTip": "web_app.client\\src\\App.jsx",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2024-03-26T12:31:06.711Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\KrisDev\\web_app\\web_app.client\\index.html",
+              "RelativeDocumentMoniker": "web_app.client\\index.html",
+              "ToolTip": "C:\\KrisDev\\web_app\\web_app.client\\index.html",
+              "RelativeToolTip": "web_app.client\\index.html",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-03-26T12:31:02.613Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

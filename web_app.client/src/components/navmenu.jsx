@@ -1,11 +1,29 @@
+import { useState, useEffect, useCallback } from 'react';
 import { Link } from "react-router-dom";
+
 function NavMenu() {
 
-    const token = JSON.parse(localStorage.getItem("token"));
+    const [tokenData, setTokenData] = useState({
+        username: '',
+        password: '',
+        loggedIn: 'false'
+    });
+
+    const getLogin = useCallback(async () => {
+        const data = await JSON.parse(localStorage.getItem("token"));
+        setTokenData(data);
+    }, [])
+
+
     function logOut() {
-        localStorage.setItem("token", JSON.stringify({ ...token, loggedIn: false }));
+        localStorage.setItem("token", JSON.stringify({ ...tokenData, loggedIn: false }));
+        setTokenData(JSON.parse(localStorage.getItem("token")));
         location.reload();
     }
+
+    useEffect(() => {
+        getLogin().catch(console.error);
+    }, [getLogin])
 
     return (
         <div className="layout-wrapper">
@@ -23,12 +41,10 @@ function NavMenu() {
                     <li>
                         <Link to={'/Contact'}>Contact</Link>
                     </li>
-                    {token.loggedIn && 
-                    <>
-                        <li>
+                    {tokenData && tokenData.loggedIn && 
+                    <li>
                             <Link to={'/'} onMouseDown={logOut}>Log Out</Link>
-                        </li>
-                    </>}
+                    </li>}
                 </ul>
             </nav>
         </div>

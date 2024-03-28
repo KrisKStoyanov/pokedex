@@ -3,7 +3,7 @@
 "ServerUrl": "https://localhost:5173",
 "RedirectUrl": "",
 "LaunchCommand": "npm run dev",
-"WorkingDirectory": "C:\\Projects\\Assignments\\web_app\\web_app.Server\\..\\web_app.client",
+"WorkingDirectory": "C:\\KrisDev\\web_app\\web_app.Server\\..\\web_app.client",
 "MaxTimeoutInSeconds": "120",
 "KeepRunning": "false"
 }

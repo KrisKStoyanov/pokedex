@@ -6,7 +6,7 @@ function Login() {
     const [token, setToken] = useState({
         username: '',
         password: '',
-        loggedIn: true
+        loggedIn: 'false'
     });
 
     function handleSubmit() {

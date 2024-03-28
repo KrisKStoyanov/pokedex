@@ -1,0 +1,29 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "build",
+			"path": "web_app.client",
+			"problemMatcher": [],
+			"label": "npm: build - web_app.client",
+			"detail": "vite"
+		},
+		{
+			"type": "npm",
+			"script": "dev",
+			"path": "web_app.client",
+			"problemMatcher": [],
+			"label": "npm: dev - web_app.client",
+			"detail": "vite"
+		},
+		{
+			"label": "build_run",
+			"dependsOrder": "sequence",
+			"dependsOn": [
+				"npm: build - web_app.client",
+				"npm: dev - web_app.client"
+			]
+		}
+	]
+}
