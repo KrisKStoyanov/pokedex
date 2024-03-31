@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "Hash": "Z5SEXcp23Zap31A5cK034gYGczWKSrLOglyFi38ilZk=",
+  "Hash": "Zuz5DHl4TEoHP1waIQbxWH1nilT8LTYiUvwOgHG3SqI=",
   "Source": "web_app.Server",
   "BasePath": "_content/web_app.Server",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [
     {
-      "Identity": "C:\\KrisDev\\web_app\\web_app.client\\web_app.client.esproj",
+      "Identity": "C:\\Projects\\GitHub\\web_app\\web_app.client\\web_app.client.esproj",
       "Version": 2,
       "Source": "web_app.client",
       "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
