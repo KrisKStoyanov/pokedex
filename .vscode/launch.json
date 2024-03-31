@@ -2,11 +2,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "C#: web_app.Server [https]",
+            "name": "C#: web_app.Server [Default Configuration]",
             "type": "dotnet",
             "request": "launch",
-            "projectPath": "${workspaceFolder}\\web_app.Server\\web_app.Server.csproj",
-            "launchConfigurationId": "TargetFramework=;https"
+            "projectPath": "${workspaceFolder}\\web_app.Server\\web_app.Server.csproj"
         }
     ]
 }
