@@ -1,20 +1,20 @@
 {
   "Version": 1,
-  "Hash": "Zuz5DHl4TEoHP1waIQbxWH1nilT8LTYiUvwOgHG3SqI=",
+  "Hash": "RyYKNMXE1lnjOky64qI+6s7pFilXZBFLxUy160vDR9s=",
   "Source": "web_app.Server",
   "BasePath": "_content/web_app.Server",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [
     {
-      "Identity": "C:\\Projects\\GitHub\\web_app\\web_app.client\\web_app.client.esproj",
+      "Identity": "c:\\Projects\\GitHub\\web_app\\web_app.client\\web_app.client.esproj",
       "Version": 2,
       "Source": "web_app.client",
       "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
-      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishProperties": "",
       "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
       "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
-      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildProperties": "",
       "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
     }
   ],

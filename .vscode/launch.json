@@ -2,11 +2,11 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "node-terminal",
-            "name": "Run Script: dev",
+            "name": "C#: web_app.Server [https]",
+            "type": "dotnet",
             "request": "launch",
-            "command": "npm run dev",
-            "cwd": "${workspaceFolder}\\web_app.client"
+            "projectPath": "${workspaceFolder}\\web_app.Server\\web_app.Server.csproj",
+            "launchConfigurationId": "TargetFramework=;https"
         }
     ]
 }
